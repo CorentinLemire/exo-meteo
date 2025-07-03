@@ -1,0 +1,10 @@
+.image {
+    width: auto 0;
+    height: 100px;
+
+}
+
+body {
+    padding: 2rem;
+    gap: 15px;
+}

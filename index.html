@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meteo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+
+
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center h-5">
+        <div class="card shadow-sm w-100" style="max-width: 380px;">
+            <div class="card-body text-center">
+
+                <h4 id="city" class="fw-bold">Chargement...</h4>
+                <p id="date" class="text-muted mb-3"></p>
+
+
+                <img id="icon" alt="Icône météo" class="img-fluid mb-2" style="width: 100px;">
+                <h1 id="temperature" class="display-4 mb-0">-- °C</h1>
+                <p id="description" class="lead text-capitalize text-muted"></p>
+
+                <div class="row mt-4">
+                    <div class="col text-start">
+                        <small>Min</small><br>
+                        <span id="tempmin">-- °C</span>
+                    </div>
+                    <div class="col text-center">
+                        <small>Max</small><br>
+                        <span id="tempmax">-- °C</span>
+                    </div>
+                    <div class="col text-end">
+                        <small>Vent</small><br>
+                        <span id="wind">-- km/h</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1 class="text-center " id="city"></h1>
+    <h2 id="temperature" class="text-center"></h2>
+    <div id="tempmax"></div>
+    <div id="tempmin"></div>
+    <div id="description"></div>
+    <div id="icon"> <img src="https://openweathermap.org/img/wn/01d.png" alt=""></div>
+    <div id="wind"></div>
+
+
+
+    <div id="%pluie"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
