@@ -11,40 +11,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-primary text-white m-0 p-0" style="min-height: 100vh;">
 
-
-    <div class="container min-vh-100 d-flex align-items-center justify-content-center h-5">
-        <div class="card shadow-sm w-100" style="max-width: 380px;">
-            <div class="card-body text-center">
-
-                <h4 id="city" class="fw-bold">Chargement...</h4>
-                <p id="date" class="text-muted mb-3"></p>
-
-
-                <img id="icon" alt="Icône météo" class="img-fluid mb-2" style="width: 100px;">
-                <h1 id="temperature" class="display-4 mb-0">-- °C</h1>
-                <p id="description" class="lead text-capitalize text-muted"></p>
-
-                <div class="row mt-4">
-                    <div class="col text-start">
-                        <small>Min</small><br>
-                        <span id="tempmin">-- °C</span>
-                    </div>
-                    <div class="col text-center">
-                        <small>Max</small><br>
-                        <span id="tempmax">-- °C</span>
-                    </div>
-                    <div class="col text-end">
-                        <small>Vent</small><br>
-                        <span id="wind">-- km/h</span>
-                    </div>
-                </div>
-
-
-
+    <div class="container-fluid d-flex flex-column justify-content-between py-4" style="min-height: 100vh;">
+        <div class="text-center mb-4">
+            <input type="text" id="cityInput" placeholder="Entrez une ville" class="form-control w-75 mx-auto">
+            <button onclick="getWeather()" class="btn btn-light mt-2">Voir la météo</button>
+        </div>
+        <div class="text-center">
+            <h1 id="city" class="fw-bold"></h1>
+            <h2 id="temperature" class="display-1 fw-semibold"></h2>
+        </div>
+        <div class="text-center my-3">
+            <div id="icon">
+                <img src="https://openweathermap.org/img/wn/01d.png" alt="Icône" id="weatherIcon" style="width: 100px;">
+            </div>
+            <div id="description" class="text-capitalize mt-2 fs-5"></div>
+        </div>
+        <div class="container mt-4" id="forecast"></div>
+        <div class="d-flex justify-content-around text-center mb-3">
+            <div>
+                <div class="text-uppercase small">Min</div>
+                <div id="tempmin" class="fw-bold"></div>
+            </div>
+            <div>
+                <div class="text-uppercase small">Max</div>
+                <div id="tempmax" class="fw-bold"></div>
             </div>
         </div>
+        <div class="text-center mb-2">
+            <div class="text-uppercase small">Vent</div>
+            <div id="wind" class="fw-bold"></div>
+            <div id="pluie"></div>
+        </div>
+
     </div>
 
 
@@ -60,20 +60,6 @@
 
 
 
-
-
-
-    <h1 class="text-center " id="city"></h1>
-    <h2 id="temperature" class="text-center"></h2>
-    <div id="tempmax"></div>
-    <div id="tempmin"></div>
-    <div id="description"></div>
-    <div id="icon"> <img src="https://openweathermap.org/img/wn/01d.png" alt=""></div>
-    <div id="wind"></div>
-
-
-
-    <div id="%pluie"></div>
     <script src="script.js"></script>
 </body>
 
