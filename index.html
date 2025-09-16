@@ -16,10 +16,36 @@
     <div class="container-fluid d-flex flex-column justify-content-between py-4" style="min-height: 100vh;">
         <div class="text-center mb-4">
             <input type="text" id="cityInput" placeholder="Entrez une ville" class="form-control w-75 mx-auto">
-            <button onclick="getWeather()" class="btn btn-light mt-2">Voir la météo</button>
+            <a class="btn btn-danger mt-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample" onclick="displayFavorites()">
+                <i class="bi bi-star-fill"></i> favoris
+
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="bi bi-star-fill"></i>favoris
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+                        <div class="dropdown mt-3">
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="getWeather()" class="btn btn-light mt-2">Voir la météo</button>
         </div>
         <div class="text-center">
-            <h1 id="city" class="fw-bold"></h1>
+            <h1 id="city" class="fw-bold d-inline"></h1>
+            <button id="favoriteBtn" class="btn btn-sm btn-warning ms-2 d-none"></button>
             <h2 id="temperature" class="display-1 fw-semibold"></h2>
         </div>
         <div class="text-center my-3">
@@ -54,12 +80,7 @@
 
 
 
-
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
